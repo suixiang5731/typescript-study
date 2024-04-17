@@ -1,0 +1,43 @@
+// vue 项目中的常用配置，基本上都是这个模板
+// 不需要都记住，常用地了解即可
+{
+  "compilerOptions": {
+    "target":"esnext", /*指定编译之后的版本目标'ES3'(default),'ES5','ES2015','ES2016'，'ES2017'，'ES2018'，'ES2019′ or 'ESNEXT' */
+    "module":"esnext", /*指定要使用的模块标准:‘none′,'commonjs',‘amd',‘system',‘umd','es2015' or 'ESNEXT' */
+    "noImplicitAny":false, /*是否默认禁用any */
+    "removeComments":true, /*是否移除注释*/
+    "declaration":true, /*_是否自动创建类型声明文件*/
+    "strict":true, /*是否开启严格模式，设置为true则启动所有类型检查, strict 实际上是一个多个配置的项的集合*/
+    "strictNullChecks": false, /* 是否开启对null和undefined的严格检查 */
+    "jsx":"preserve", /*指定jsx代码用于的开发环境，取值：preserve，react，react-native*/
+    "importHelpers":true, /*引入tslib里的辅助工具函数*/
+    "moduleResolution":"node", /*选择模块解析策略,有'node'和'classic'两种类型*/
+    "experimentalDecorators":true, /*启用实验性的装饰器特性*/
+    "esModuleInterop":true, /*通过为导入内容创建命名空间,实现CommonJS和ES模块之间的互操作性 */
+    "allowSyntheticDefaultImports":true,/*允许从没有默认导出的模块中默认导入*/
+    "sourceMap":true, /*是否生成map文件*/
+    "baseUrl":".", /*工作根目录，即指定配置的工作目录*/
+    "types":[ /*指定引入的类型声明文件,默认是自动引入所有声明文件，一旦指定该选项，则会禁用自动引入，改为只引入指定的类型声明文件，如果指定*/
+      "webpack-env",
+      "jest"
+    ],
+    "paths": { /*指定模块的路径，和baseUrl有关联，和webpack 中resolve.alias 配置一样，别名*/
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [ /*译过程中需要引入的库文件的列表*/
+      "esnext","dom","dom.iterable","scripthost"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

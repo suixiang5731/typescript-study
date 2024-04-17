@@ -63,7 +63,7 @@ f1_0 = f2_0
  * f1_3 的类型是(a: number|string, b: number, c: number) => void，
  * 而 f2_3 的类型是(c: number, d: number) => void。
  * 它们的参数数量不同，因此不能直接将 f2_3 赋值给 f1_3。
- * 这样的写法在 TypeScript 中是不正确的，会导致类型错误。
+ * 这样的写法在 TypeScript 中是不正确的，会导致类型错误。 --- 该解释来自chatgpt ，不一定正确，实际上下面的代码并没有报错
  */
 /*let f1_3 = function (a: number|string, b: number, c: number) {
 }
