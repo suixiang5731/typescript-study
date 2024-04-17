@@ -90,7 +90,7 @@ function find3<T extends number | string>(arg: T[], target: T): T {
 }
 
 // find2(["1", "2"], "2") // 报错
-find3(["1", "2"], "2") // 报错
+find3(["1", "2"], "2")
 // 泛型约束可以 extends 任何类型：联合类型，交叉类型，自定义接口等等
 // 例如 继承一个接口 -- <T extends inter1<number>>
 function find4<T extends inter1<number>>(arg: T[], target: T): T {
