@@ -66,7 +66,6 @@ let obj1:{[propsName:number]:number}={12:333,123:333}
 let obj2:{x:number,y:string,z?:number}={x:123,y:"123"}
 /**
  * 3. 固定某几个属性，其他属性随便加
- * 例如下面的 z 属性，加上问号即可
  */
 let obj3:{[propsName:string]:number}={x:333,y:333}
 // 固定 一定要有x，y字段，后面字段通过 ‘[propsName:string]:number’ 设置实现随便添加
