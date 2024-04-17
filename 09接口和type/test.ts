@@ -89,7 +89,7 @@ interface person {
 class Mary implements person {
     age: number
 
-    eat(food: string): string
+    // eat(food: string): string
     eat(food: string) {
         return "好吃"
     }
@@ -114,24 +114,28 @@ type typeObj2 = {
     str: string
 }
 type typeObj3 = typeObj1 & typeObj2
+
 /**
  * interface 的继承
  */
 interface interObj1 {
     num: number
 }
+
 interface interObj2 {
     str: string
 }
-interface interObj3 extends interObj1,interObj2{
+
+interface interObj3 extends interObj1, interObj2 {
     arr: number[]
 }
 
-let interfaceObj3:interObj3={
-    num:1,
+let interfaceObj3: interObj3 = {
+    num: 1,
     str: '1',
-    arr: [1,2]
+    arr: [1, 2]
 }
+
 /**
  * interface 的声明合并
  * 注意：重名属性不能冲突，设置的类型必须一模一样
@@ -139,13 +143,14 @@ let interfaceObj3:interObj3={
 interface interObj4 {
     a: string
 }
+
 interface interObj4 {
     // a: string|number // 冲突报错
     // a: number // 冲突报错
     b: number
 }
 
-let interfaceObj4:interObj4={
+let interfaceObj4: interObj4 = {
     a: '1',
     b: 1
 }
